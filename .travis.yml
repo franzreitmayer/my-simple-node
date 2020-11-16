@@ -8,7 +8,7 @@ services:
 script:
   - docker --version 
   - docker build -t simple_node .
-  - docker tag simple-node fr77/my-simple-node:latest
+  - docker tag simple_node fr77/my-simple-node:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
